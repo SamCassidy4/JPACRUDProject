@@ -18,16 +18,26 @@ public class Recipe {
 	private String name;
 
 	private String description;
+
+	private String ingredients;
+	
+	@Column(name = "cooking_instructions")
+	private String cookingInstructions;
 	
 	private String history;
 
-	private String ingredients;
-
-	@Column(name = "cooking_instructions")
-	private String cookingInstructions;
-
 	public Recipe() {
 	}
+
+	public Recipe(String name, String description, String ingredients, String cookingInstructions, String history) {
+		this.name = name;
+		this.description = description;
+		this.history = history;
+		this.ingredients = ingredients;
+		this.cookingInstructions = cookingInstructions;
+	}
+	
+		
 
 	public int getId() {
 		return id;
@@ -53,14 +63,6 @@ public class Recipe {
 		this.description = description;
 	}
 
-	public String getHistory() {
-		return history;
-	}
-
-	public void setHistory(String history) {
-		this.history = history;
-	}
-
 	public String getIngredients() {
 		return ingredients;
 	}
@@ -75,6 +77,14 @@ public class Recipe {
 
 	public void setCookingInstructions(String cookingInstructions) {
 		this.cookingInstructions = cookingInstructions;
+	}
+
+	public String getHistory() {
+		return history;
+	}
+
+	public void setHistory(String history) {
+		this.history = history;
 	}
 
 	@Override
@@ -96,8 +106,8 @@ public class Recipe {
 
 	@Override
 	public String toString() {
-		return "Recipe [id=" + id + ", name=" + name + ", history=" + history + ", description=" + description
-				+ ", ingredients=" + ingredients + ", cookingInstructions=" + cookingInstructions + "]";
+		return "Recipe [id=" + id + ", name=" + name + ", description=" + description + ", ingredients=" + ingredients
+				+ ", cookingInstructions=" + cookingInstructions + ", history=" + history + "]";
 	}
-
-}
+	}
+	

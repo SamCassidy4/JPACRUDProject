@@ -13,7 +13,7 @@ import com.skilldistillery.recipebook.entities.Recipe;
 @Service
 @Transactional
 public class RecipeDaoImpl implements RecipeDAO {
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
@@ -30,30 +30,27 @@ public class RecipeDaoImpl implements RecipeDAO {
 
 	@Override
 	public Recipe create(Recipe recipe) {
-		em.getTransaction().begin();
+
 		em.persist(recipe);
-		em.getTransaction().commit();
-		
+
 		return recipe;
 	}
 
 	@Override
 	public Recipe update(int id, Recipe recipe) {
-		
+
 		Recipe alteredRecipe = em.find(Recipe.class, id);
-		
-		if(alteredRecipe != null) {
-			em.getTransaction().begin();
-			
+
+		if (alteredRecipe != null) {
+
 			alteredRecipe.setName(recipe.getName());
 			alteredRecipe.setDescription(recipe.getDescription());
 			alteredRecipe.setIngredients(recipe.getIngredients());
 			alteredRecipe.setCookingInstructions(recipe.getCookingInstructions());
 			alteredRecipe.setHistory(recipe.getHistory());
-			
-			em.getTransaction().commit();
+
 		}
-		
+
 		return recipe;
 	}
 
@@ -61,15 +58,13 @@ public class RecipeDaoImpl implements RecipeDAO {
 	public boolean delete(int id) {
 		boolean deleted = false;
 		Recipe deletedRecipe = em.find(Recipe.class, id);
-		
-		if(deletedRecipe != null) {
-			em.getTransaction().begin();
+
+		if (deletedRecipe != null) {
 			em.remove(deletedRecipe);
-			
-			deleted =!em.contains(deletedRecipe);
-			em.getTransaction().commit();
+
+			deleted = !em.contains(deletedRecipe);
 		}
-		return deleted; 
+		return deleted;
 	}
 
 }
