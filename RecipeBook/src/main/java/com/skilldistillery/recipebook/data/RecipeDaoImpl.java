@@ -51,7 +51,7 @@ public class RecipeDaoImpl implements RecipeDAO {
 
 		}
 
-		return recipe;
+		return alteredRecipe;
 	}
 
 	@Override

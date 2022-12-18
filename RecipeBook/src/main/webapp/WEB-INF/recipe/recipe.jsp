@@ -38,8 +38,8 @@ Recipe ID: <input type="text" name="id"/><input type="submit" value="Show Recipe
 	<br>
 	<br>
 	
-	<form action="update.do" method="GET">
-	<input type="radio" name="updateRecipe" value="yes"><label>Yes</label>
+	<form action="updateView.do" method="GET">
+	<input type="radio" name="updateView" value="yes"><label>Yes</label>
 		<input type="text" hidden="true" name="id" value="${recipe.id}">
 		<input type="submit" value="Edit Recipe">
 	</form>

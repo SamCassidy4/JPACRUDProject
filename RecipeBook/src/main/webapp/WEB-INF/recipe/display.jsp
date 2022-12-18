@@ -4,14 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Recipe</title>
+<title>Updated Recipe Here</title>
 </head>
 <body>
-<h1>Edit Recipe </h1>
 
 
-<form action=""></form>
+<h1>Recipe Successfully Updated</h1>
 
+
+
+	
 
 </body>
 </html>
