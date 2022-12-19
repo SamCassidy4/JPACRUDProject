@@ -6,6 +6,8 @@ The JPACRUDProject makes use of everything learned so far. I created a recipe da
 
 This project makes use of full stack development, the database stores the data through the use of MySQL, Java will communicate with the database through the use of java code, using methods and java objects as well as junit testing for the complete experience of developing a real world project. Lastly, the project makes use of web forms for an easy user experience. In this project, I have the user being able to look up a recipe using the ID of said ID, however, I recognize this is unrealistic when the database becomes much larger, later on this will be replaced by a keyword search and an ingredient search. On the webpage the users are able to click on whatever recipe they want to see to be able to see all the information they want, once they do they are prompted to return to home, edit the recipe, or delete the recipe. Once one of those is clicked and the respective information is filled out, the user is given a message that their request has been processed and the recipe is updated. Lastly, once the user returns to home they are able to create their own recipe which will be properly added to the database once all the proper information is filled out. 
 
+http://54.244.123.27:8080/RecipeBook/
+
 ## Technologies Used
 - Java 8
 - SpringMVC
