@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Recipe successfully Deleted</title>
+<title>Recipe Deleted</title>
 
 
 <!-- CSS only -->

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Recipe</title>
+<title>Update Recipe</title>
 
 <!-- CSS only -->
 	<link

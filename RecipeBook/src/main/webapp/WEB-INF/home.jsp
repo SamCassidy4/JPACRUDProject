@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="container-fluid"></div>
-	<h1>We're doing Recipe's Baby Oh yeah</h1>
+	<h1>Recipe Database</h1>
 
 	<form action="getRecipe.do" method="GET">
 		Recipe ID: <input type="text" name="id" /><input type="submit"
@@ -55,8 +55,8 @@
 			<table>
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
+						<!-- <th>ID</th> -->
+						<th>Recipe List</th>
 
 					</tr>
 				</thead>
@@ -65,7 +65,7 @@
 					<c:forEach var="recipe" items="${recipeList}">
 
 						<tr>
-							<td>${recipe.id}</td>
+							<%-- <td>${recipe.id}</td> --%>
 							<td><a href="getRecipe.do?id=${recipe.id}">${recipe.name}</a></td>
 						</tr>
 					</c:forEach>
